@@ -74,6 +74,11 @@
       <command>xattr -rc . </command>
       <workingdir>${ProjectDir}</workingdir>
     </Command>
+    <Command>
+      <type>Clean</type>
+      <command>xattr -rc . </command>
+      <workingdir>${ProjectDir}</workingdir>
+    </Command>
   </CustomCommands>
 </CustomCommands>
   </PropertyGroup>
