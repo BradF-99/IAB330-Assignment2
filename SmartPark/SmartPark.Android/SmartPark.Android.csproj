@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -101,7 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SmartPark\SmartPark.csproj">
-      <Project>{162A699B-00D5-4646-9321-39664489714B}</Project>
+      <Project>{DBC08FAA-3D8D-44A3-917D-3930E8E33C8E}</Project>
       <Name>SmartPark</Name>
     </ProjectReference>
   </ItemGroup>
