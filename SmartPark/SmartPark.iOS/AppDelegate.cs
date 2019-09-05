@@ -25,6 +25,8 @@ namespace SmartPark.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            Xamarin.FormsMaps.Init(); // initialise MapKit
+
             return base.FinishedLaunching(app, options);
         }
     }
