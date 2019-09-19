@@ -24,7 +24,7 @@ namespace SmartPark
                 DependencyService.Register<MockDataStore>();
             else
                 DependencyService.Register<AzureDataStore>();
-            MainPage = new MapsTest();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
