@@ -26,6 +26,7 @@ namespace SmartPark.iOS
             LoadApplication(new App());
 
             Xamarin.FormsMaps.Init(); // initialise MapKit
+            ZXing.Net.Mobile.Forms.iOS.Platform.Init(); // iinitialise QR code scanner
 
             return base.FinishedLaunching(app, options);
         }
