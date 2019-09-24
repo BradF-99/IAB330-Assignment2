@@ -667,3 +667,6 @@ public/
 
 # DynamoDB Local files
 .dynamodb/
+
+# Specific files required for backend
+!SmartPark-Backend/bin
