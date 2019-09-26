@@ -10,11 +10,13 @@ ENV REDIS_URL //0.0.0.0:6379
 RUN apk update && \
     apk add redis
 
-RUN npm install -g concurrently   
+RUN npm install -g concurrently
 
 ADD . /app
-EXPOSE 80
-EXPOSE 443
+EXPOSE 3000
 WORKDIR /app
-RUN npm i 
-CMD concurrently "/usr/bin/redis-server --bind '0.0.0.0'" "sleep 5s; ./bin/www" 
+RUN chmod u+x ./bin/www
+
+RUN npm i
+
+CMD concurrently "/usr/bin/redis-server --bind '0.0.0.0'" "sleep 5s; ./bin/www"
