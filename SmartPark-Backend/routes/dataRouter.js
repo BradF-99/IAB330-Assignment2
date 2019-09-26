@@ -96,6 +96,9 @@ async function strToJson(csvString) {
       .fromString(csvString)
       .then((json) => {
         resolve(json);
+      })
+      .catch(function (err) {
+        reject(err);
       });
   });
 }
