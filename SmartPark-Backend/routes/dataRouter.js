@@ -62,20 +62,8 @@ async function getHashData(key) {
   });
 }
 
-async function setHashData(key, field, value) {
-  return new Promise(function (resolve, reject) {
-    redisClient.hset(key, field, value, function (err, result) {
-      if (err) {
-        reject(err)
-      } else {
-        resolve(result)
-      }
-    });
-  });
-}
-
 async function scanAsync(cursor, pattern, results) {
-  return redisClient.scanAsync(cursor, 'MATCH', pattern, 'COUNT', '1000')
+  return redisClient.scanAsync(cursor, 'MATCH', pattern, 'COUNT', '2000')
     .then(function (res) {
       let keys = res[1];
       keys.forEach(function (key) {
