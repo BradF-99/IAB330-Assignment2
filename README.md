@@ -21,11 +21,11 @@ Assignment 2 for IAB330, Semester 2, 2019.
 
 ### App Dependencies
 
-* The app uses Xamarin as a framework.
+* The app uses Xamarin as a framework. 
 
 ### Backend Dependencies
 
-* Node.js and NPM are required to run the backend.
+* Node.js, NPM, and Redis are required to run the backend.
 * (Recommended) Docker to deploy the backend as an image.
 
 A full list of dependencies can be found [here](https://github.com/BradF-99/IAB330-Assignment2/network/dependencies).
