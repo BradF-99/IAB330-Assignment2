@@ -12,7 +12,6 @@ const jsonCache = new JSONCache(redisClient, {
 
 const csv = require('csvtojson');
 
-module.exports = strToJson;
 router.get('/', function (req, res, next) {
   getData(res);
 });
