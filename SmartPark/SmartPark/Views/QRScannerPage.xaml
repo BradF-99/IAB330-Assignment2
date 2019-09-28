@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
              mc:Ignorable="d"
-             x:Class="SmartPark.Views.QRScannerPage">
+             x:Class="SmartPark.Views.QRScannerPage"
+             Title="SmartPark">
     <ContentPage.Content>
         <StackLayout>
             <zxing:ZXingScannerView Grid.Row="1" x:Name="_scanView" OnScanResult="Handle_OnScanResult" IsScanning="true"

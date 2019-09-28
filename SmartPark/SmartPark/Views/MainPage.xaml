@@ -29,6 +29,17 @@
                 <views:QRScannerPage />
             </x:Arguments>
         </NavigationPage>
+
+        <NavigationPage Title="Login">
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="tab_qr.png"/>
+                </OnPlatform>
+            </NavigationPage.Icon>
+            <x:Arguments>
+                <views:LoginPage />
+            </x:Arguments>
+        </NavigationPage>
     </TabbedPage.Children>
     
 </TabbedPage>
