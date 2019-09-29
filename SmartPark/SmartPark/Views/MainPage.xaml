@@ -37,7 +37,7 @@
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <views:LoginPage />
+                <views:AccountPage />
             </x:Arguments>
         </NavigationPage>
     </TabbedPage.Children>

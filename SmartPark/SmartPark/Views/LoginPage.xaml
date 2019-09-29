@@ -4,10 +4,10 @@
         <StackLayout Spacing="20" Padding="50" VerticalOptions="Center">
             <Entry Placeholder="Email" BackgroundColor="White"></Entry>
             <Entry Placeholder="Password" BackgroundColor="White" IsPassword="True"></Entry>
-            <Button Text="Login" TextColor="Black" BackgroundColor="#D5E4F3"/>
+            <Button Text="Login" TextColor="Black" BackgroundColor="#D5E4F3" Clicked="LoginAccepted"/>
             <Label HorizontalOptions="Start" Text="Forgotten Password?" TextColor="White" FontSize="Small" TextDecorations="Underline">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding TapCommand}"/>
+                    <TapGestureRecognizer />
                 </Label.GestureRecognizers>
             </Label>
         </StackLayout>

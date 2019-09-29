@@ -11,5 +11,10 @@ namespace SmartPark.Views
         {
             InitializeComponent();
         }
+        private async void LoginAccepted(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+            await Navigation.PushAsync(new MainPage());
+        }
     }
 }
