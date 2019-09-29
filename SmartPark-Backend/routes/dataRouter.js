@@ -86,7 +86,6 @@ async function pullData(res) {
   const parkingMeters = await strToJson(data.data);
   parkingMeters.forEach(data => {
     key = data["METER_NO"];
-    delete data["METER_NO"]
     dbQueue.push(jsonCache.set(key, data));
   });
   await Promise.all(parkingMeters);
