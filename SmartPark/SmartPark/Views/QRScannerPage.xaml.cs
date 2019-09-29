@@ -22,7 +22,7 @@ namespace SmartPark.Views
         {
             Device.BeginInvokeOnMainThread(async () =>
             {
-                await DisplayAlert("Scanned result", result.Text, "OK");
+                await Navigation.PushAsync(new PostScanPage(result));
             });
         }
 
