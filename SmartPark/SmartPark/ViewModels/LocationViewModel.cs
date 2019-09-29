@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Xamarin.Forms.Maps;
 using Xamarin.Essentials;
+using SmartPark.Models;
 
 /*
  * TO DO
@@ -27,8 +28,14 @@ namespace SmartPark.ViewModels
 
         public LocationViewModel()
         {
+            Services.APIDataStore API = new Services.APIDataStore();
 
-            PinCollection.Add(new Pin() { Position = UserPosition, Type = PinType.Generic, Label = "Test Pin" });
+            foreach (ParkingMeter meter in API.meters)
+            {
+                Position position = new Position(Double.Parse(meter.LATITUDE), Double.Parse(meter.LONGITUDE));
+                string pinLabel = "Available Bays: " + meter.VEH_BAYS;
+                PinCollection.Add(new Pin() { Position = position, Type = PinType.Generic, Label = pinLabel });
+            }
 
             Task.Run(async () =>
             {
