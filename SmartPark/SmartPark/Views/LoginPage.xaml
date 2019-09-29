@@ -5,12 +5,15 @@
             <Image Source="Icon_SmartPark.png"></Image>
             <Entry x:Name="User_email" Placeholder="Email" BackgroundColor="White"></Entry>
             <Entry x:Name="User_password" Placeholder="Password" BackgroundColor="White" IsPassword="True"></Entry>
-            <Button x:Name="Login_btn" Text="Login" TextColor="Black" BackgroundColor="#448ACA" Clicked="LoginAccepted"/>
             <Label HorizontalOptions="Start" Text="Forgotten Password?" TextColor="#88B4DD" FontSize="Small" TextDecorations="Underline">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer />
                 </Label.GestureRecognizers>
             </Label>
+            <Button x:Name="Login_btn" Text="Login" TextColor="Black" BackgroundColor="#D5E4F3" Clicked="LoginAccepted"/>
+            
+            <Label HorizontalOptions="Center" Text="Not Signed up yet?" TextColor="Black" FontSize="Medium"></Label>
+            <Button Text="Sign Up Here!" TextColor="White" BackgroundColor="#2C5881"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
