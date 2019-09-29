@@ -6,6 +6,6 @@
     x:Class="SmartPark.Views.MapPage"
     Title="SmartPark">
     <ContentPage.Content>
-        <local:BindableMap MapType="Street" MapPosition="{Binding MyPosition}" MapPins="{Binding PinCollection}" />
+        <local:BindableMap MapType="Street" MapPosition="{Binding UserPosition}" MapPins="{Binding PinCollection}" />
     </ContentPage.Content>
 </ContentPage>
