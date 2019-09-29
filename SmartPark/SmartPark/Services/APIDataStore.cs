@@ -18,5 +18,13 @@ namespace SmartPark.Services
 
             meters = JsonConvert.DeserializeObject<List<ParkingMeter>>(json);
         }
+
+        public static ParkingMeter getData(string query)
+        {
+            string url = "http://149.28.165.104:3000/data/"+query;
+            var json = new WebClient().DownloadString(url);
+            List<ParkingMeter> meter = JsonConvert.DeserializeObject<List<ParkingMeter>>(json);
+            return meter[0];
+        }
     }
 }
