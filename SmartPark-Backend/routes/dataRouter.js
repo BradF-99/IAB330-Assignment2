@@ -17,7 +17,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/:query', function (req, res, next) {
-  getData(res);
+  getData(req.params.query,res);
 });
 
 async function getData(query,res) {
@@ -26,7 +26,7 @@ async function getData(query,res) {
   scanAsync(0, query, keys).then(function () {
       if (keys.length == 0) {
         pullData().then(function () {
-          scanAsync(0, pattern, keys);
+          scanAsync(0, query, keys);
         });
       }
       returnData(keys, res);
