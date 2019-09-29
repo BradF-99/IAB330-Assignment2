@@ -16,14 +16,10 @@ namespace SmartPark.Models
 
         public bool CheckInformation()
         {
-            if(!this.Username.Equals("") && !this.Password.Equals(""))
-            {
+            if (this.Username != null && this.Password != null)
                 return true;
-            }
             else
-            {
                 return false;
-            }
         }
     }
 }

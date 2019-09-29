@@ -11,18 +11,18 @@ namespace SmartPark.Views
         {
             InitializeComponent();
         }
-        void LoginAccepted(object sender, EventArgs e)
+
+        async void LoginAccepted(object sender, EventArgs e)
         {
-            //await Navigation.PopAsync();
-            //await Navigation.PushAsync(new MainPage());
             User user = new User(User_email.Text, User_password.Text);
             if(user.CheckInformation())
             {
-                DisplayAlert("Login", "Login Success", "Oke");
+                Application.Current.MainPage = new NavigationPage(new MainPage());
+
             }
             else
             {
-                DisplayAlert("Login", "Login Not Correct, Empty Username or Password", "Oke");
+                await DisplayAlert("Login", "Login Not Correct, Empty Username or Password", "Ok");
             }
         }
     }

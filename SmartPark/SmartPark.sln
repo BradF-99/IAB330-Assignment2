@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPark.Android", "SmartP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPark.iOS", "SmartPark.iOS\SmartPark.iOS.csproj", "{35603565-46B2-456B-9588-55DCBFF63E64}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartPark", "SmartPark\SmartPark.csproj", "{DBC08FAA-3D8D-44A3-917D-3930E8E33C8E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartPark", "SmartPark\SmartPark.csproj", "{DBC08FAA-3D8D-44A3-917D-3930E8E33C8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
