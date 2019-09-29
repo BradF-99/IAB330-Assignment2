@@ -13,14 +13,17 @@ const jsonCache = new JSONCache(redisClient, {
 const csv = require('csvtojson');
 
 router.get('/', function (req, res, next) {
+  getData("[4-5]*",res);
+});
+
+router.get('/:query', function (req, res, next) {
   getData(res);
 });
 
-async function getData(res) {
+async function getData(query,res) {
   let keys = [];
-  let pattern = "[4-5]*"
 
-  scanAsync(0, pattern, keys).then(function () {
+  scanAsync(0, query, keys).then(function () {
       if (keys.length == 0) {
         pullData().then(function () {
           scanAsync(0, pattern, keys);
