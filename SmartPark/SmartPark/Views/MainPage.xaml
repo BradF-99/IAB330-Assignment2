@@ -30,14 +30,14 @@
             </x:Arguments>
         </NavigationPage>
 
-        <NavigationPage Title="Login">
+        <NavigationPage Title="Account">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS" Value="tab_qr.png"/>
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <views:AccountPage />
+                <views:LoginPage />
             </x:Arguments>
         </NavigationPage>
     </TabbedPage.Children>
