@@ -13,7 +13,8 @@ namespace SmartPark.Views
     {
         public MapPage()
         {
-            BindingContext = new LocationViewModel();
+            LocationViewModel locationViewModel = new LocationViewModel();
+            BindingContext = locationViewModel;
             InitializeComponent();
         }
     }

@@ -39,7 +39,7 @@ namespace SmartPark.ViewModels
 
                     if (location != null)
                     {
-                        if (location.IsFromMockProvider)
+                        if (!location.IsFromMockProvider)
                         {
                             UserPosition = new Position(location.Latitude, location.Longitude);
                         }
@@ -67,7 +67,7 @@ namespace SmartPark.ViewModels
         private ObservableCollection<Pin> _pinCollection = new ObservableCollection<Pin>();
         public ObservableCollection<Pin> PinCollection { get { return _pinCollection; } set { _pinCollection = value; OnPropertyChanged(); } }
 
-        private Position _userPosition = new Position(-37.8141, 144.9633);
+        private Position _userPosition = new Position(-27.476944, 153.028056);
         public Position UserPosition { get { return _userPosition; } set { _userPosition = value; OnPropertyChanged(); } }
     }
 }
