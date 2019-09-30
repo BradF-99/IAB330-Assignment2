@@ -17,13 +17,18 @@ namespace SmartPark.Views
             User user = new User(User_email.Text, User_password.Text);
             if(user.CheckInformation())
             {
-                Application.Current.MainPage = new MainPage();
+                Application.Current.MainPage = new NavigationPage(new MainPage());
 
             }
             else
             {
                 await DisplayAlert("Login", "Login Not Correct, Empty Username or Password", "Ok");
             }
+        }
+
+        void SignUpClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MainPage());
         }
     }
 }
