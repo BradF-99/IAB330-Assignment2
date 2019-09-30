@@ -203,4 +203,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\tab_qr%403x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_account%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tab_account%403x.png" />
+  </ItemGroup>
 </Project>
