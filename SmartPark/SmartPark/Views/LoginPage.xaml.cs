@@ -22,7 +22,7 @@ namespace SmartPark.Views
             }
             else
             {
-                await DisplayAlert("Login", "Login Not Correct, Empty Username or Password", "Ok");
+                await DisplayAlert("Login", "Empty Username or Password", "Ok");
             }
         }
 
