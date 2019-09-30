@@ -34,7 +34,7 @@ namespace SmartPark.Views
             else
             {
                 btnEnabled = false;
-                fs.Spans.Add(new Span { Text = "We were unable to retrieve the data for this meter.\nPlease try again later.", FontSize = 20 });
+                fs.Spans.Add(new Span { Text = "We were unable to retrieve\nthe data for this meter.\nPlease try again later.", FontSize = 20 });
             }
 
             InitializeComponent();
@@ -87,7 +87,7 @@ namespace SmartPark.Views
             TimeSpan time = TimeSpan.FromSeconds(timeElapsed);
             FormattedString fs = new FormattedString();
             fs.Spans.Add(new Span { Text = "Currently parked at:\n", FontSize = 20 });
-            fs.Spans.Add(new Span { Text = meter.STREET + " " + meter.SUBURB + "\n", FontAttributes = FontAttributes.Bold, FontSize = 20 });
+            fs.Spans.Add(new Span { Text = meter.STREET + ", " + meter.SUBURB + "\n\n", FontAttributes = FontAttributes.Bold, FontSize = 20 });
             fs.Spans.Add(new Span { Text = "Duration: ", FontSize = 20 });
             fs.Spans.Add(new Span { Text = time.ToString(@"hh\:mm\:ss"), FontAttributes = FontAttributes.Bold, FontSize = 20 });
             return fs;
@@ -100,7 +100,7 @@ namespace SmartPark.Views
             fs.Spans.Add(new Span { Text = meter.METER_NO + "\n", FontSize = 20 });
 
             fs.Spans.Add(new Span { Text = "Location: ", FontAttributes = FontAttributes.Bold, FontSize = 20 });
-            fs.Spans.Add(new Span { Text = meter.STREET + " " + meter.SUBURB + "\n", FontSize = 20 });
+            fs.Spans.Add(new Span { Text = meter.STREET + ", " + meter.SUBURB + "\n", FontSize = 20 });
 
             fs.Spans.Add(new Span { Text = "Bays available: ", FontAttributes = FontAttributes.Bold, FontSize = 20 });
             fs.Spans.Add(new Span { Text = meter.VEH_BAYS, FontAttributes = FontAttributes.Italic, FontSize = 20 });
