@@ -19,7 +19,7 @@
             <Button x:Name="Login_btn" Text="Login" TextColor="Black" BackgroundColor="#D5E4F3" Clicked="LoginAccepted"/>
             
             <Label HorizontalOptions="Center" Text="Not Signed up yet?" TextColor="Gray" FontSize="Medium"></Label>
-            <Button Text="Sign Up Here!" TextColor="White" BackgroundColor="#2C5881"/>
+            <Button Text="Sign Up Here!" TextColor="White" BackgroundColor="#2C5881" Clicked="SignUpClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
