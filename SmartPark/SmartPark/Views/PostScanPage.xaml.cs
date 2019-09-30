@@ -29,7 +29,7 @@ namespace SmartPark.Views
 
             if(meter.METER_NO != null)
             {
-                fs = setLabelDetails(meter);
+                fs = SetLabelMeterDetails(meter);
             }
             else
             {
@@ -41,10 +41,9 @@ namespace SmartPark.Views
             labelDetails.FormattedText = fs;
             btnStart.IsVisible = btnEnabled;
             btnStart.IsEnabled = btnEnabled;
-
         }
 
-        async public void btnPress(object sender, EventArgs args)
+        async public void BtnPress(object sender, EventArgs args)
         {
             FormattedString fs = new FormattedString();
 
@@ -61,7 +60,7 @@ namespace SmartPark.Views
             }
             else
             {
-                fs = setLabelDetails(meter);
+                fs = SetLabelMeterDetails(meter);
                 btnStart.Text = "Start Parking";
                 btnStart.IsEnabled = false;
 
@@ -78,11 +77,11 @@ namespace SmartPark.Views
             timeElapsed++;
             Device.BeginInvokeOnMainThread(async () =>
             {
-                labelDetails.FormattedText = setLabelTimerDetails(timeElapsed);
+                labelDetails.FormattedText = SetLabelTimerDetails(timeElapsed);
             });
         }
 
-        private FormattedString setLabelTimerDetails(int timeElapsed)
+        private FormattedString SetLabelTimerDetails(int timeElapsed)
         {
             TimeSpan time = TimeSpan.FromSeconds(timeElapsed);
             FormattedString fs = new FormattedString();
@@ -93,7 +92,7 @@ namespace SmartPark.Views
             return fs;
         }
 
-        private FormattedString setLabelDetails(ParkingMeter meter)
+        private FormattedString SetLabelMeterDetails(ParkingMeter meter)
         {
             FormattedString fs = new FormattedString();
             fs.Spans.Add(new Span { Text = "Meter ID: ", FontAttributes = FontAttributes.Bold, FontSize = 20 });
