@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SmartPark.Views.StartPage"
+             BackgroundColor="#448ACA">
+    <ContentPage.Content>
+        <StackLayout Spacing="35">
+            
+            <Image Source="Start_img_SmartPark.png" Margin="20" />
+            
+            <Label HorizontalOptions="Center" Text="SmartPark" 
+                   TextColor="White" FontSize="Title" ></Label>
+
+            <Button x:Name="Start_btn" Text="get start" FontSize="Subtitle" TextColor="#2C5881" BackgroundColor="#D5E4F3" 
+                    Padding="20" Margin="30,5" CornerRadius="10"
+                    Clicked="Start_Clicked"/>
+        
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
