@@ -11,7 +11,7 @@
             <Label x:Name="labelDetails" Text="{Binding labelTest}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="#000000" />
-            <Button Text="Start Parking" />
+            <Button x:Name="btnStart" Text="Start Parking" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -18,8 +18,9 @@ namespace SmartPark.Views
         public PostScanPage(Result result)
         {
             ParkingMeter meter = APIDataStore.GetData(result.Text);
-            
-            var fs = new FormattedString();
+
+            FormattedString fs = new FormattedString();
+            bool btnEnabled = true;
 
             if(meter.METER_NO != null)
             {
@@ -43,11 +44,14 @@ namespace SmartPark.Views
             }
             else
             {
-                fs.Spans.Add(new Span { Text = "We were unable to retrieve the data for this meter. Please try again later.", FontSize = 20 });
+                btnEnabled = false;
+                fs.Spans.Add(new Span { Text = "We were unable to retrieve the data for this meter.\nPlease try again later.", FontSize = 20 });
             }
 
             InitializeComponent();
             labelDetails.FormattedText = fs;
+            btnStart.IsVisible = btnEnabled;
+            btnStart.IsEnabled = btnEnabled;
         }
     }
 }
