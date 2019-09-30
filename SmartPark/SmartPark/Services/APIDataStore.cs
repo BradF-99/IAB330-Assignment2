@@ -9,10 +9,10 @@ namespace SmartPark.Services
     public class APIDataStore
     {
         public List<ParkingMeter> meters;
+        private readonly string url = "http://149.28.165.104:3000/data/";
         public APIDataStore()
         {
             meters = new List<ParkingMeter>();
-            string url = "http://149.28.165.104:3000/data/";
             try
             {
                 meters = JsonConvert.DeserializeObject<List<ParkingMeter>>(new WebClient().DownloadString(url));
@@ -28,7 +28,7 @@ namespace SmartPark.Services
 
         public static ParkingMeter GetData(string query)
         {
-            string url = "http://149.28.165.104:3000/data/"+query;
+            string url = "http://149.28.165.104:3000/data/" + query; // required for static method
             try
             {
                 List<ParkingMeter> meter = JsonConvert.DeserializeObject<List<ParkingMeter>>(new WebClient().DownloadString(url));
