@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="SmartPark.Views.PostScanPage">
+             x:Class="SmartPark.Views.PostScanPage"
+             Title="Parking Space Details">
     <ContentPage.Content>
         <StackLayout>
             <Label x:Name="labelDetails" Text="{Binding labelTest}"

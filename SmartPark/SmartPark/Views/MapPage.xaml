@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:SmartPark.Views"
     x:Class="SmartPark.Views.MapPage"
-    Title="SmartPark">
+    Title="Parking Spaces">
     <ContentPage.Content>
         <local:BindableMap MapType="Street" MapPosition="{Binding UserPosition}" MapPins="{Binding PinCollection}" />
     </ContentPage.Content>

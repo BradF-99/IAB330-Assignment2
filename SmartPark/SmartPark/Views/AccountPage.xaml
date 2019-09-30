@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="SmartPark.Views.AccountPage"
-             Title="SmartPark"
+             Title="Account Details"
              BackgroundColor="White">
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="50" VerticalOptions="Center">
