@@ -17,7 +17,8 @@ namespace SmartPark.Views
             User user = new User(User_email.Text, User_password.Text);
             if(user.CheckInformation())
             {
-                Application.Current.MainPage = new NavigationPage(new MainPage());
+                //Application.Current.MainPage = new NavigationPage(new MainPage()); ///removed space for navigation bar
+                Application.Current.MainPage = new MainPage();
 
             }
             else

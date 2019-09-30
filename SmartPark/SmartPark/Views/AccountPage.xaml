@@ -1,8 +1,23 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SmartPark.Views.AccountPage" Title="Account">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SmartPark.Views.AccountPage"
+             Title="SmartPark"
+             BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Spacing="20" Padding="50" VerticalOptions="Center">
+            <Entry x:Name="User_email" Placeholder="Email" BackgroundColor="White"></Entry>
+            <Entry x:Name="User_password" Placeholder="Password" BackgroundColor="White" IsPassword="True"></Entry>
+            <Label HorizontalOptions="Start" Text="Forgotten Password?" TextColor="#88B4DD" FontSize="Small" TextDecorations="Underline">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer />
+                </Label.GestureRecognizers>
+            </Label>
+            <Button x:Name="Login_btn" Text="Login" TextColor="Black" BackgroundColor="#D5E4F3" Clicked="LoginAccepted"/>
 
+            <Label HorizontalOptions="Center" Text="Not Signed up yet?" TextColor="Gray" FontSize="Medium"></Label>
+            <Button Text="Sign Up Here!" TextColor="White" BackgroundColor="#2C5881"/>
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
