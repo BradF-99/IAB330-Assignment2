@@ -28,7 +28,12 @@ namespace SmartPark.Views
 
         void SignUpClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MainPage());
+            Navigation.PushAsync(new NavigationPage(new SignUpPage()));
+        }
+
+        void ForgotPasswordTapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new NavigationPage(new PasswordRecoveryPage()));
         }
     }
 }
