@@ -16,10 +16,12 @@ namespace SmartPark.Views
         public QRScannerPage()
         {
             InitializeComponent();
+            _scanView.IsScanning = false;
         }
 
         public void Handle_OnScanResult(Result result)
         {
+            _scanView.IsScanning = false;
             Device.BeginInvokeOnMainThread(async () =>
             {
                 await Navigation.PushAsync(new PostScanPage(result));
