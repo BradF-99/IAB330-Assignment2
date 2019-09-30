@@ -12,6 +12,7 @@
             <Entry x:Name="User_password" Placeholder="Password" BackgroundColor="White" IsPassword="True"></Entry>
             <Label HorizontalOptions="Start" Text="Forgotten Password?" TextColor="#88B4DD" FontSize="Small" TextDecorations="Underline">
                 <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ForgotPasswordTapped" NumberOfTapsRequired="1"/>
                     <TapGestureRecognizer />
                 </Label.GestureRecognizers>
             </Label>
