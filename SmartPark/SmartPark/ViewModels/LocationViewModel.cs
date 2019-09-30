@@ -11,7 +11,6 @@ using SmartPark.Models;
  * TO DO
  * Actually handle exceptions
  * Get user position (doesn't seem to work?)
- * Check that pin drops work
  */
 
 

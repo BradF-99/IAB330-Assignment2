@@ -9,8 +9,6 @@
              Title="Scan QR Code">
     <ContentPage.Content>
         <StackLayout>
-            <!--<zxing:ZXingScannerView Grid.Row="1" x:Name="_scanView" OnScanResult="Handle_OnScanResult" IsScanning="false"
-                                WidthRequest="200" HeightRequest="200" />-->
             <Grid x:Name="ScannerGrid">
             </Grid>
         </StackLayout>
