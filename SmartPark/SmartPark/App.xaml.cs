@@ -19,7 +19,8 @@ namespace SmartPark
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new LoginPage());
+            //MainPage = new NavigationPage(new LoginPage()); /// removed space of basic Navigation bar from xamarin form
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()
