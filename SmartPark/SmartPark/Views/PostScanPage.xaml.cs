@@ -17,7 +17,7 @@ namespace SmartPark.Views
     {
         public PostScanPage(Result result)
         {
-            ParkingMeter meter = APIDataStore.getData(result.Text);
+            ParkingMeter meter = APIDataStore.GetData(result.Text);
             
             var fs = new FormattedString();
 

@@ -29,7 +29,7 @@ namespace SmartPark.Services
             }
         }
 
-        public static ParkingMeter getData(string query)
+        public static ParkingMeter GetData(string query)
         {
             string url = "http://149.28.165.104:3000/data/"+query;
             try
