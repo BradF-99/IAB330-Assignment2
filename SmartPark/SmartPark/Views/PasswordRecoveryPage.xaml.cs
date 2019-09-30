@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace SmartPark.Views
 {
-    public partial class AccountPage : ContentPage
+    public partial class PasswordRecoveryPage : ContentPage
     {
-        public AccountPage()
+        public PasswordRecoveryPage()
         {
             InitializeComponent();
         }

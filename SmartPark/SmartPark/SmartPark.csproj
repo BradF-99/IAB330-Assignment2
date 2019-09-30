@@ -25,6 +25,8 @@
   <ItemGroup>
     <Compile Remove="Views\MyPage.xaml.cs" />
     <Compile Remove="Views\NewItemPage.xaml.cs" />
+    <Compile Remove="Views\SignUpPage.cs" />
+    <Compile Remove="Views\PasswordRecoveryPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Views\MapPage.xaml.cs">
@@ -32,6 +34,12 @@
     </Compile>
     <Compile Update="Views\SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\AccountPage.xaml.cs">
+      <DependentUpon>AccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PasswordRecoveryPage.xaml.cs">
+      <DependentUpon>PasswordRecoveryPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
