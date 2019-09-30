@@ -1,9 +1,7 @@
 ﻿using Newtonsoft.Json;
 using SmartPark.Models;
-using System;
 using System.Collections.Generic;
 using System.Net;
-using System.Text;
 using Xamarin.Forms;
 
 namespace SmartPark.Services
@@ -17,8 +15,7 @@ namespace SmartPark.Services
             string url = "http://149.28.165.104:3000/data/";
             try
             {
-                string json = new WebClient().DownloadString(url);
-                meters = JsonConvert.DeserializeObject<List<ParkingMeter>>(json);
+                meters = JsonConvert.DeserializeObject<List<ParkingMeter>>(new WebClient().DownloadString(url));
             }
             catch
             {
@@ -34,8 +31,7 @@ namespace SmartPark.Services
             string url = "http://149.28.165.104:3000/data/"+query;
             try
             {
-                var json = new WebClient().DownloadString(url);
-                List<ParkingMeter> meter = JsonConvert.DeserializeObject<List<ParkingMeter>>(json);
+                List<ParkingMeter> meter = JsonConvert.DeserializeObject<List<ParkingMeter>>(new WebClient().DownloadString(url));
                 return meter[0];
             }
             catch
