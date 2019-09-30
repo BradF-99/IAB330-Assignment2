@@ -15,13 +15,17 @@ namespace SmartPark.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PostScanPage : ContentPage
     {
+        public string labelResult { get; set; }
+
         public PostScanPage(Result result)
         {
             ParkingMeter meter = APIDataStore.getData(result.Text);
-            string labelTest = "Meter Details: " + meter.STREET + ", " + meter.SUBURB + "(" + meter.METER_NO + ")";
-            //labelDetails.BindingContext = labelTest;
+
+            string resultText = "Meter Details: " + meter.STREET + ", " + meter.SUBURB + "(" + meter.METER_NO + ")";
+
             //labelDetails.SetBinding(Label.TextProperty, labelTest);
             InitializeComponent();
+            labelDetails.Text = resultText;
         }
     }
 }

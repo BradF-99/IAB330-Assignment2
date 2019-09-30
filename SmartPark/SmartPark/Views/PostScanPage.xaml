@@ -7,7 +7,7 @@
              x:Class="SmartPark.Views.PostScanPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="labelDetails"  Text="{Binding labelTest}"
+            <Label x:Name="labelDetails" Text="{Binding labelTest}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" FontSize="Large" TextColor="#000000" />
             <Button Text="Start Parking" />
