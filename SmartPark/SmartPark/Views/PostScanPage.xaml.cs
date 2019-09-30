@@ -15,9 +15,10 @@ namespace SmartPark.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PostScanPage : ContentPage
     {
-        ParkingMeter meter;
+        #pragma warning disable IDE0044 // shut visual studio up
+        private ParkingMeter meter;
         bool parkingStarted = false;
-        Timer timer = new System.Timers.Timer();
+        private readonly Timer timer = new Timer();
         int timeElapsed;
 
         public PostScanPage(Result result)
