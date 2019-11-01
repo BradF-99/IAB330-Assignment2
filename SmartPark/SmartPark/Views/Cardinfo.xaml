@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:fastEntry="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors"
+             mc:Ignorable="d"
+             x:Class="SmartPark.Views.Cardinfo">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid VerticalOptions="FillAndExpand"
+              ColumnSpacing="20"
+              HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Please enter your card detail"
+                       TextColor="#3D3E40"
+                       FontSize="20"
+                       VerticalOptions="Center"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"/>
+
+                <Frame HasShadow="false"
+                      Padding="10"
+                      BorderColor="#88B4DD"
+                      Margin="30,30,30,10"
+                      Grid.Row="1"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="3">
+            <StackLayout Orientation="Horizontal"
+                               Spacing="20">
+
+                <Entry HorizontalOptions="FillAndExpand"
+                               Keyboard="Numeric"
+                               Placeholder="CardNumber"
+                               Visual="Custom">
+                    <Entry.Behaviors>
+                        <fastEntry:XamarinFastEntryBehaviour Mask="####-####-####-####" 
+                                                                       MaxLength="19"/>
+                    </Entry.Behaviors>
+                </Entry>
+            </StackLayout>
+        </Frame>
+
+        <Frame HasShadow="false"
+                      Padding="10"
+                      BorderColor="#88B4DD"
+                      Margin="30,0,0,0"
+                      Grid.Row="2"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="2">
+            <StackLayout Orientation="Horizontal">
+                <Entry HorizontalOptions="FillAndExpand"
+                               Keyboard="Numeric"
+                               Placeholder="CardExpirationDate"
+                               Visual="Custom">
+                    <Entry.Behaviors>
+                        <fastEntry:XamarinFastEntryBehaviour Mask="##/##" 
+                                                                   MaxLength="19"/>
+                    </Entry.Behaviors>
+                </Entry>
+            </StackLayout>
+        </Frame>
+
+        <Frame HasShadow="false"
+                       Padding="10"
+                      BorderColor="#88B4DD"
+                      Margin="0,0,30,0"
+                      Grid.Row="2"
+                      Grid.Column="2">
+            <StackLayout Orientation="Horizontal">
+                <Entry HorizontalOptions="FillAndExpand"
+                              Keyboard="Numeric"
+                              Placeholder="CardCvv"
+                              Visual="Custom">
+                    <Entry.Behaviors>
+                        <fastEntry:XamarinFastEntryBehaviour Mask="###" 
+                                                                   MaxLength="3"/>
+                    </Entry.Behaviors>
+                </Entry>
+            </StackLayout>
+        </Frame>
+                
+                <CheckBox Color="LightGray"
+                         WidthRequest="30"
+                         HorizontalOptions="Start"
+                         Margin="30,0,0,0"
+                         Visual="Material"
+                         Grid.Row="3"
+                         Grid.Column="0"/>
+
+                <Label Text="Remember me"
+                       TextColor="#3D3E40"
+                       FontSize="16"
+                       VerticalOptions="Center"
+                       Grid.Row="3"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"/>
+
+                <Frame HasShadow="false"
+                      Margin="30,30,30,10"
+                      Grid.Row="4"
+                      Grid.Column="2"
+                      Grid.ColumnSpan="1">
+                    <Button x:Name="Save_btn" Text="Save" TextColor="Black" BackgroundColor="#D5E4F3" Clicked="SaveClicked"/>
+                </Frame>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+    
+    

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SmartPark.Views.SettingPage">
+    <ContentPage.Content>
+        <StackLayout Padding="40">
+            <Frame CornerRadius="100" 
+           HeightRequest="200"
+           WidthRequest="200"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                <Image Source="profile.jpg" 
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+            </Frame>
+
+            <Button x:Name="Cardinfo_btn" Text="Add Credit Card" TextColor="Black" Margin="10, 10, 10, 10" BackgroundColor="#D5E4F3" Clicked="CardClicked"/>
+            <Button x:Name="Carinfo_btn" Text="Add Car" TextColor="Black" Margin="10, 10, 10, 10" BackgroundColor="#D5E4F3" Clicked="CarClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

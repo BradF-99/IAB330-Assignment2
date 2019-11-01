@@ -6628,13 +6628,16 @@ namespace SmartPark.Droid
 			public const int notify_panel_notification_icon_bg = 2131165517;
 			
 			// aapt resource value: 0x7F07014E
-			public const int tooltip_frame_dark = 2131165518;
+			public const int profile = 2131165518;
 			
 			// aapt resource value: 0x7F07014F
-			public const int tooltip_frame_light = 2131165519;
+			public const int tooltip_frame_dark = 2131165519;
 			
 			// aapt resource value: 0x7F070150
-			public const int xamarin_logo = 2131165520;
+			public const int tooltip_frame_light = 2131165520;
+			
+			// aapt resource value: 0x7F070151
+			public const int xamarin_logo = 2131165521;
 			
 			static Drawable()
 			{
