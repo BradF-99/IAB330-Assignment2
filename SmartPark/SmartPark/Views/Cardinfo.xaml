@@ -111,13 +111,21 @@
                        Grid.Column="1"
                        Grid.ColumnSpan="2"/>
 
-                <Frame HasShadow="false"
-                      Margin="30,30,30,10"
-                      Grid.Row="4"
-                      Grid.Column="2"
-                      Grid.ColumnSpan="1">
-                    <Button x:Name="Save_btn" Text="Save" TextColor="Black" BackgroundColor="#D5E4F3" Clicked="SaveClicked"/>
-                </Frame>
+                <Button  x:Name="Save_btn"
+                         Text="Save"
+                         Grid.Row="4"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="3"
+                         BackgroundColor="#D5E4F3"
+                         
+                         TextColor="Black"
+                         BorderWidth="1"
+                         FontSize="18"
+                         CornerRadius="25"
+                         Padding="18"
+                         Margin="30,0"
+                         Clicked="SaveClicked"/>
+                
             </Grid>
         </ScrollView>
     </ContentPage.Content>
