@@ -5,6 +5,10 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+
 namespace SmartPark.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
@@ -24,6 +28,9 @@ namespace SmartPark.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+
+            AppCenter.Start("3dd7679f-5b52-4d28-ac41-fd483985f449",
+                   typeof(Analytics), typeof(Crashes)); // initialise App Centre
 
             Xamarin.FormsMaps.Init(); // initialise MapKit
             ZXing.Net.Mobile.Forms.iOS.Platform.Init(); // iinitialise QR code scanner

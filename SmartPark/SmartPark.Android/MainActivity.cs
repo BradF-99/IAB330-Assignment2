@@ -4,6 +4,10 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+
 namespace SmartPark.Droid
 {
     [Activity(Label = "SmartPark", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -15,7 +19,10 @@ namespace SmartPark.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-            
+
+            AppCenter.Start("05f949ef-ae76-4e93-9432-3066b4429702",
+                               typeof(Analytics), typeof(Crashes)); // initialise App Centre
+
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Xamarin.FormsMaps.Init(this, savedInstanceState); // initialise Google Maps API 
