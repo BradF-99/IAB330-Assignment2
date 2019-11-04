@@ -17,9 +17,9 @@
            HorizontalOptions="Center"
            VerticalOptions="Center" />
             </Frame>
-
             <Button x:Name="Cardinfo_btn" Text="Add Credit Card" TextColor="Black" Margin="10, 10, 10, 10" BackgroundColor="#D5E4F3" Clicked="CardClicked"/>
             <Button x:Name="Carinfo_btn" Text="Add Car" TextColor="Black" Margin="10, 10, 10, 10" BackgroundColor="#D5E4F3" Clicked="CarClicked"/>
+            <Button x:Name="Logout_btn" Text="Logout" TextColor="Black" Margin="10, 10, 10, 10" BackgroundColor="#D5E4F3" Clicked="LogoutClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

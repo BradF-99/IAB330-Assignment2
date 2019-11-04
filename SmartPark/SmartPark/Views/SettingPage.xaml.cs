@@ -26,5 +26,10 @@ namespace SmartPark.Views
         {
             Navigation.PushAsync(new NavigationPage(new Carinfo()));
         }
+
+        void LogoutClicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new LoginPage();
+        }
     }
 }
