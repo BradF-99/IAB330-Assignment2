@@ -33,7 +33,10 @@ namespace SmartPark.Views
                 Device.InvokeOnMainThreadAsync(async () =>
                 {
                     var result = await this.DisplayAlert("Failed!", "Wrong Username or Password", null, "Continue");
-                    await Navigation.PushAsync(new LoginPage());
+                    if (result)
+                    {
+                        await Navigation.PushAsync(new LoginPage());
+                    }
                 });
             }
         }
