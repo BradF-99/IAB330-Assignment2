@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"             
+             x:Class="SmartPark.Views.GetMyLcation"
+             BackgroundColor="#448ACA">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Margin="0,20,0,10" Text="My Car Location" FontAttributes="Bold" FontSize="Large" TextColor="White" HorizontalTextAlignment="Center" >
+            </Label>
+
+            <Entry x:Name="txtAddress" Placeholder="Search My Car Location..."></Entry>
+
+            <Button x:Name="btnLocation" Text="Get My Car Location" Clicked="btnLocation_Clicked" TextColor="#2C5881" BackgroundColor="#D5E4F3" Padding="20" Margin="30,5" CornerRadius="10" />
+            <Label HorizontalTextAlignment="Center" x:Name="lblAdminArea"></Label>
+            <Label HorizontalTextAlignment="Center" x:Name="lblCountryName"></Label>
+            <Label HorizontalTextAlignment="Center" x:Name="lblCountryCode"></Label>
+            <Label HorizontalTextAlignment="Center" x:Name="lblLocality"></Label>
+            <Label HorizontalTextAlignment="Center" x:Name="lblSubAdminArea"></Label>
+            <Label HorizontalTextAlignment="Center" x:Name="lblSublocality"></Label>
+            <Label HorizontalTextAlignment="Center" x:Name="lblPostalcode"></Label>
+ 
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
