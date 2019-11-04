@@ -26,7 +26,7 @@ namespace SmartPark.ViewModels
             foreach (ParkingMeter meter in API.meters)
             {
                 Position position = new Position(Double.Parse(meter.LATITUDE), Double.Parse(meter.LONGITUDE));
-                string pinLabel = "Available Bays: " + meter.VEH_BAYS;
+                string pinLabel = "Meter " + meter.METER_NO + ", Available Bays: " + meter.VEH_BAYS;
                 PinCollection.Add(new Pin() { Position = position, Type = PinType.Generic, Label = pinLabel });
             }
 
