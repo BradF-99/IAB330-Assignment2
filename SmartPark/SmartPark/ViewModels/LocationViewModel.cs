@@ -6,13 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms.Maps;
 using Xamarin.Essentials;
 using SmartPark.Models;
-
-/*
- * TO DO
- * Actually handle exceptions
- * Get user position (doesn't seem to work?)
- */
-
+using Xamarin.Forms;
 
 namespace SmartPark.ViewModels
 {
@@ -36,7 +30,7 @@ namespace SmartPark.ViewModels
                 PinCollection.Add(new Pin() { Position = position, Type = PinType.Generic, Label = pinLabel });
             }
 
-            Task.Run(async () =>
+            Device.BeginInvokeOnMainThread(async () =>
             {
                 try
                 {
@@ -45,27 +39,15 @@ namespace SmartPark.ViewModels
 
                     if (location != null)
                     {
-                        if (!location.IsFromMockProvider)
-                        {
-                            UserPosition = new Position(location.Latitude, location.Longitude);
-                        }
+                        UserPosition = new Position(location.Latitude, location.Longitude);
                     }
-                }
-                catch (FeatureNotSupportedException fnsEx)
-                {
-                    // Handle not supported on device exception
-                }
-                catch (FeatureNotEnabledException fneEx)
-                {
-                    // Handle not enabled on device exception
-                }
-                catch (PermissionException pEx)
-                {
-                    // Handle permission exception
                 }
                 catch (Exception ex)
                 {
-                    // Unable to get location
+                    Device.BeginInvokeOnMainThread(async () =>
+                    {
+                        await App.Current.MainPage.DisplayAlert("Something's gone wrong", "There has been an error in getting your location. " + ex.Message, "OK");
+                    });
                 }
             });
         }
