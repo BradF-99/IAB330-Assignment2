@@ -14,7 +14,7 @@
             <Label HorizontalOptions="Center" Text="SmartPark" 
                    TextColor="White" FontSize="Title" ></Label>
 
-            <Button x:Name="Start_btn" Text="get start" FontSize="Subtitle" TextColor="#2C5881" BackgroundColor="#D5E4F3" 
+            <Button x:Name="Start_btn" Text="Get Started!" FontSize="Subtitle" TextColor="#2C5881" BackgroundColor="#D5E4F3" 
                     Padding="20" Margin="30,5" CornerRadius="10"
                     Clicked="Start_Clicked"/>
         

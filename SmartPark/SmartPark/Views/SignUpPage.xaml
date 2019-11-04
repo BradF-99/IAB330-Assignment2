@@ -1,24 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SmartPark.Views.SignUpPage" Title="Sign Up">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartPark.Views.SignUpPage" Title="Sign Up">
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
             <StackLayout Orientation="Horizontal">
-                <Entry Placeholder="First Name"></Entry>
-                <Entry Placeholder="Last Name"></Entry>
             </StackLayout>
-            <Entry Placeholder="Email"></Entry>
-            <Entry Placeholder="Password" IsPassword="True"></Entry>
-            <Entry Placeholder="Confirm Password" IsPassword="True"></Entry>
-            <Label Text="Date Of Birth"></Label>
-            <DatePicker></DatePicker>
-            <Label Text="Address"></Label>
-            <Editor></Editor>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Save Password"></Label>
-                <Switch IsToggled="False"></Switch>
-            </StackLayout>
+            <Entry Placeholder="Email" x:Name="EntryEmail"></Entry>
+            <Entry Placeholder="Password" IsPassword="True" x:Name="EntryPassword"></Entry>
+            <Entry Placeholder="Confirm Password" IsPassword="True" x:Name="EntryPasswordConfirm"></Entry>
             <Button Text="Sign Up"
-                    Clicked="OnButtonClicked"></Button>
+                    Clicked="OnSignupClicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

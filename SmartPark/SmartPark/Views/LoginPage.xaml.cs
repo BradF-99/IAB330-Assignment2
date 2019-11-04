@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using SmartPark.Models;
+using SmartPark.Tables;
+using SQLite;
 using Xamarin.Forms;
 
 namespace SmartPark.Views
@@ -9,21 +12,29 @@ namespace SmartPark.Views
     {
         public LoginPage()
         {
+            SetValue(NavigationPage.HasNavigationBarProperty, false);
             InitializeComponent();
         }
 
-        async void LoginAccepted(object sender, EventArgs e)
-        {
-            User user = new User(User_email.Text, User_password.Text);
-            if(user.CheckInformation())
-            {
-                //Application.Current.MainPage = new NavigationPage(new MainPage()); ///removed space for navigation bar
-                Application.Current.MainPage = new MainPage();
 
+        void LoginAccepted(object sender, EventArgs e)
+        {
+            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "UsersDatabase.db");
+            var db = new SQLiteConnection(dbpath);
+
+            var myquery = db.Table<RegisteredUsers>().Where(u => u.Username.Equals(EntryEmail.Text) && u.Password.Equals(EntryPassword.Text)).FirstOrDefault();
+
+            if (myquery != null)
+            {
+                Application.Current.MainPage = new MainPage();
             }
             else
             {
-                await DisplayAlert("Login", "Empty Username or Password", "Ok");
+                Device.InvokeOnMainThreadAsync(async () =>
+                {
+                    var result = await this.DisplayAlert("Failed!", "Wrong Username or Password", null, "Continue");
+                    await Navigation.PushAsync(new LoginPage());
+                });
             }
         }
 

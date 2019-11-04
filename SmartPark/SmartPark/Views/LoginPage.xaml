@@ -9,8 +9,8 @@
             <StackLayout Spacing="20" Padding="50" VerticalOptions="Center">
                 <Image Source="Icon_SmartPark.png" HeightRequest="50"></Image>
                 <Label HorizontalOptions="Center" Text="SmartPark" TextColor="#448ACA" FontSize="Title" ></Label>
-                <Entry x:Name="User_email" Placeholder="Email" BackgroundColor="White"></Entry>
-                <Entry x:Name="User_password" Placeholder="Password" BackgroundColor="White" IsPassword="True"></Entry>
+                <Entry x:Name="EntryEmail" Placeholder="Email" BackgroundColor="White"></Entry>
+                <Entry x:Name="EntryPassword" Placeholder="Password" BackgroundColor="White" IsPassword="True"></Entry>
                 <Label HorizontalOptions="Start" Text="Forgotten Password?" TextColor="#88B4DD" FontSize="Small" TextDecorations="Underline">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ForgotPasswordTapped" NumberOfTapsRequired="1"/>
