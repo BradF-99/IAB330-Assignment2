@@ -7,7 +7,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="20" Padding="50" VerticalOptions="Center">
-                <Image Source="Icon_SmartPark.png" HeightRequest="50"></Image>
+                <Image Source="Icon_SmartPark.png" HeightRequest="100"></Image>
                 <Label HorizontalOptions="Center" Text="SmartPark" TextColor="#448ACA" FontSize="Title" ></Label>
                 <Entry x:Name="EntryEmail" Placeholder="Email" BackgroundColor="White"></Entry>
                 <Entry x:Name="EntryPassword" Placeholder="Password" BackgroundColor="White" IsPassword="True"></Entry>
