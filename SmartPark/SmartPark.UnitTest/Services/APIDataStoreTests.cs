@@ -34,6 +34,7 @@ namespace SmartPark.Services.Tests
             {
                 ParkingMeter meter = APIDataStore.GetData("5601");
                 Assert.IsNotNull(meter);
+                Assert.AreEqual("5601", meter.METER_NO);
             }
             catch (Exception ex)
             {
