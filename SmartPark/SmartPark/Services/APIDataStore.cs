@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using SmartPark.Models;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using Xamarin.Forms;
@@ -17,7 +18,7 @@ namespace SmartPark.Services
             {
                 meters = JsonConvert.DeserializeObject<List<ParkingMeter>>(new WebClient().DownloadString(url));
             }
-            catch
+            catch (Exception exception)
             {
                 Device.BeginInvokeOnMainThread(async () =>
                 {
